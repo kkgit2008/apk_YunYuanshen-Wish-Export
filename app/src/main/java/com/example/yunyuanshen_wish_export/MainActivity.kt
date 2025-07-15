@@ -36,7 +36,7 @@ class YunYuanShenWebviewClient(private val context: MainActivity) : WebViewClien
 
     @Deprecated("Deprecated in Kotlin")
     override fun shouldInterceptRequest(view: WebView?, url: String?): WebResourceResponse? {
-        if (url.startsWith("https://webstatic.mihoyo.com/hk4e/event/e20190909gacha-v3/index.html")) { //判断地址是否是抽卡地址
+        if (url?.startsWith("https://webstatic.mihoyo.com/hk4e/event/e20190909gacha-v3/index.html") == true) { //判断地址是否是抽卡地址
             Looper.prepare()
             AlertDialog.Builder(context)
                 .setTitle("截获到的地址")
